@@ -117,6 +117,7 @@ var renderNoteList = function (notes) {
     );
 
     $li.append($span, $delBtn);
+    console.log($li);
     noteListItems.push($li);
   }
 

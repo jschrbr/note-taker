@@ -1,11 +1,12 @@
 var db = require("../db/db");
+var uniqid = require("uniqid");
 
 module.exports = function (app) {
   app.get("/api/notes", function (req, res) {
     res.json(db);
   });
   app.post("/api/notes", function (req, res) {
-    console.log(req.body);
+    console.log(req.body, uniqid());
     // if (tableData.length < 5) {
     //   tableData.push(req.body);
     //   res.json(true);
